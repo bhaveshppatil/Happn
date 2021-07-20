@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataPolicy">
+
+    <LinearLayout
+        android:id="@+id/lyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAccept"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:src="@drawable/happnlogo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_50"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/cantora_one"
+                    android:text="We respect your data and privacy"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/policyHeader"
+                    android:text="Analytics needs" />
+
+                <TextView
+                    style="@style/policyInfo"
+                    android:text="@string/AnalyticsNeeds" />
+
+                <TextView
+                    style="@style/policyHeader"
+                    android:text="Personalized ads" />
+
+                <TextView
+                    style="@style/policyInfo"
+                    android:text="@string/PersonalizedAd" />
+
+                <TextView
+                    style="@style/policyHeader"
+                    android:text="Marketing" />
+
+                <TextView
+                    style="@style/policyInfo"
+                    android:text="@string/Marketing" />
+
+                <TextView
+                    style="@style/policyHeader"
+                    android:text="Technical requirements" />
+
+                <TextView
+                    style="@style/policyInfo"
+                    android:text="@string/Technical" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_50"
+        android:background="@drawable/btncolor"
+        android:text="Accept"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

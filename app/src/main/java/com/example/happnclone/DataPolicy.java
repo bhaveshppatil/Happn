@@ -16,19 +16,16 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
-public class MainActivity extends AppCompatActivity {
-
+public class DataPolicy extends AppCompatActivity {
     private static int RC_SIGN_IN = 100;
-    Button btnLoginView;
     GoogleSignInClient mGoogleSignInClient;
+    private Button btnAccept;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        btnLoginView = findViewById(R.id.googleLogin);
+        setContentView(R.layout.activity_data_policy);
+        btnAccept = findViewById(R.id.btnAccept);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -39,16 +36,13 @@ public class MainActivity extends AppCompatActivity {
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        btnLoginView.setOnClickListener(new View.OnClickListener() {
+        btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TermsConditions.class);
-                startActivity(intent);
+                signIn();
             }
         });
-
     }
-
 
     public void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -80,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 String personId = acct.getId();
                 Uri personPhoto = acct.getPhotoUrl();
 
-                Toast.makeText(MainActivity.this, "Welcome " + personName + "to Happn App lets find yor " +
+                Toast.makeText(DataPolicy.this, "Welcome " + personName + "to Happn App lets find yor " +
                         "girl .... ! UUREEEE ", Toast.LENGTH_LONG).show();
 
             }

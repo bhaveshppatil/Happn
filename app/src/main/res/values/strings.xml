@@ -3,5 +3,11 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_facebook">Continue with facebook</string>
     <string name="Terms_And_Condition">By registering, you are agree to our <u>Terms And Condition</u></string>
-
+    <string name="terms_and_condition">HAPPN collects your data in order to provide its services and assistance, to allow the application to run smoothly, and to send you ours and our partners’ promotional content, and to run statistical surveys.</string>
+    <string name="terms_and_condition2">This information is sent to HAPPN and its partners inside and outside of the EU. You have the right to access, correct, and delete your personal information, and if needed you have a right to contest, a right to data portability, to limit the processing of your data, and the ability define the rules for what happens to your data after your death.</string>
+    <string name="terms_and_condition3">Your consent is necessary to create an account.</string>
+    <string name="AnalyticsNeeds">HAPPN collects some of your data to measure our audience and for statistical reasons.</string>
+    <string name="PersonalizedAd">"To display ads that are relevant to you, HAPPN needs to access your device information. These ads are personalized according to your age range, gender and country or city.  "</string>
+    <string name="Marketing">"Your consent is requested in order to keep you from receiving HAPPN ads on our partners’ websites and to direct our ads to prospects with a similar profile to yours. Some data (your device ID, email address and telephone number) are shared with our partners for this purpose.  "</string>
+    <string name="Technical">"To provide you with an optimal experience, HAPPN is required to collect certain necessary information. You cannot configure this option.   "</string>
 </resources>
