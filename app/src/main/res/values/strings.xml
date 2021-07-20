@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Happn Project</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with facebook</string>
+    <string name="Terms_And_Condition">By registering, you are agree to our <u>Terms And Condition</u></string>
+
+</resources>
