@@ -9,10 +9,10 @@
 
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="@dimen/dp_30"
-        android:src="@drawable/happn"/>
+        android:src="@drawable/happn" />
 
     <TextView
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
         android:textStyle="bold" />
 
     <FrameLayout
+        android:id="@+id/LoginWithFacebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
@@ -55,10 +56,10 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/frameGoogle"
+        android:id="@+id/LoginWithGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -87,9 +88,10 @@
 
 
     <FrameLayout
+        android:id="@+id/LoginWithNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:layout_width="match_parent"
@@ -111,6 +113,7 @@
     </FrameLayout>
 
     <TextView
+        android:id="@+id/tvTermsAndCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -119,6 +122,18 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRecoverAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Recover My Account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 
