@@ -8,10 +8,11 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/dp_40"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="@dimen/dp_30"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/dp_40"
         android:src="@drawable/happn" />
 
     <TextView
@@ -20,6 +21,7 @@
         android:layout_marginStart="30dp"
         android:text="Find The People You've Crossed Paths with"
         android:textAlignment="textStart"
+        android:layout_weight="2"
         android:textColor="@color/white"
         android:textSize="65sp"
         android:textStyle="bold" />
@@ -27,63 +29,44 @@
     <FrameLayout
         android:id="@+id/LoginWithFacebook"
         android:layout_width="match_parent"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
 
-        <ImageView
+        <Button
             android:layout_width="match_parent"
+            android:id="@+id/facbooklogin"
             android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_40"
-            android:layout_marginEnd="@dimen/dp_40"
-            android:src="@drawable/fcaebook" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:text="@string/continue_with_facebook"
-            android:textAllCaps="true"
+            android:text="Continue with Facebook"
+            android:textSize="18dp"
             android:textColor="@color/white"
-            android:textSize="17sp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/ion_logo_facebook" />
+            android:background="@drawable/fcaebook"
+            android:drawableLeft="@drawable/ion_logo_facebook"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:paddingLeft="@dimen/dp_25" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/LoginWithGoogle"
         android:layout_width="match_parent"
+        android:layout_weight="4"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
 
-        <ImageView
+        <Button
             android:layout_width="match_parent"
+            android:id="@+id/googlelogin"
             android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_40"
-            android:layout_marginEnd="@dimen/dp_40"
-            android:src="@drawable/google" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:text="@string/continue_with_google"
-            android:textAllCaps="true"
+            android:text="Continue with Google"
+            android:textSize="18dp"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:background="@drawable/google"
+            android:drawableLeft="@drawable/flat_color_icons_google"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:paddingLeft="@dimen/dp_25" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/flat_color_icons_google" />
     </FrameLayout>
 
 
@@ -91,24 +74,20 @@
         android:id="@+id/LoginWithNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="5"
         android:layout_marginTop="10dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_50"
-            android:layout_marginStart="@dimen/dp_40"
-            android:layout_marginEnd="@dimen/dp_40"
-            android:src="@drawable/number" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:text="Continue With Number"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="17sp" />
+         <Button
+        android:layout_width="match_parent"
+        android:id="@+id/numberlogin"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_40"
+        android:text="Continue with Phone Number"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:background="@drawable/number"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:paddingLeft="@dimen/dp_25" />
 
     </FrameLayout>
 
@@ -117,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_weight="6"
         android:layout_marginTop="20dp"
         android:text="@string/Terms_And_Condition"
         android:textAlignment="center"
@@ -130,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:layout_weight="7"
         android:text="Recover My Account"
         android:textAlignment="center"
         android:textColor="@color/white"
