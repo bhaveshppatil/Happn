@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Quiz.MaleFemaleCheck">
+    <TextView
+        android:id="@+id/TvText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="You are..."
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="33dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/BtnMaleSvg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="40dp"
+        android:elevation="20dp"
+        android:text="Male"
+        android:background="@drawable/ic_male"
+        app:layout_constraintTop_toBottomOf="@+id/TvText1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <Button
+        android:id="@+id/FemaleSvg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="40dp"
+        android:text="Female"
+        android:background="@drawable/ic_female"
+        app:layout_constraintTop_toBottomOf="@+id/TvText1"
+        app:layout_constraintStart_toEndOf="@id/BtnMaleSvg"/>
+
+
+    <TextView
+        android:id="@+id/TextPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/FemaleSvg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Who would you like to cross paths with?"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold|italic"
+        android:layout_marginRight="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#F2F3F4"
+        app:layout_constraintTop_toBottomOf="@+id/TextPath">
+
+
+        <TextView
+            android:id="@+id/TvMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Men"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_margin="23dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/SWitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:fontFamily="casual"
+            android:text="Heart"
+            android:layout_margin="23dp"
+            android:textSize="20sp"
+            app:switchPadding="15dp"
+            app:thumbTint="@color/black" />
+
+        <TextView
+            android:id="@+id/TvWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women"
+            android:layout_below="@+id/TvMen"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_margin="23dp"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/SWitch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/SWitch"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:fontFamily="casual"
+            android:text="Heart"
+            android:layout_margin="23dp"
+            android:textSize="20sp"
+            app:switchPadding="15dp"
+            app:thumbTint="@color/black" />
+
+
+        <TextView
+            android:id="@+id/discription"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/TvWomen"
+            android:text="By clicking CONTINUE ,you expressly give your consent to the  processing of this data, So we can present you with profiles matching your prefenence."
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:id="@+id/BtnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discription"
+            android:background="@color/white"
+            android:text="Continue"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

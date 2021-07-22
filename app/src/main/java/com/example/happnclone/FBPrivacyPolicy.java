@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.happnclone.Quiz.MaleFemaleCheck;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -43,7 +44,6 @@ public class FBPrivacyPolicy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_b_privacy_policy);
-
         firebaseAuth = FirebaseAuth.getInstance();
         FacebookSdk.sdkInitialize(getApplicationContext());
         loginButton = findViewById(R.id.login_button);
@@ -55,6 +55,7 @@ public class FBPrivacyPolicy extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "onSuccess" + loginResult);
                 HandleFacebookToken(loginResult.getAccessToken());
+
 
             }
 
@@ -81,6 +82,9 @@ public class FBPrivacyPolicy extends AppCompatActivity {
                     Log.d(TAG, "Sign in credential successful");
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     updateUI(user);
+                    Intent intent = new Intent(FBPrivacyPolicy.this, MaleFemaleCheck.class);
+                    startActivity(intent);
+
                 }else {
                     Log.d(TAG, "Sign in credential successful: Failed");
 

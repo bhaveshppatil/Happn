@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 Uri personPhoto = acct.getPhotoUrl();
 
                 Toast.makeText(MainActivity.this, "Welcome " + personName + "to Happn App lets find yor " +
-                        "girl .... ! UUREEEE ", Toast.LENGTH_LONG).show();
+                        "mate .... ! UUREEEE ", Toast.LENGTH_LONG).show();
 
             }
 

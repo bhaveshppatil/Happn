@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "230588527185",
+    "project_id": "happn-clone",
+    "storage_bucket": "happn-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230588527185:android:69c07fa1117ce4370bfe70",
+        "android_client_info": {
+          "package_name": "com.example.happnclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230588527185-qdoj7deupkvg8c0gfqkjs7re2r9ceukb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Ec97b8J44Xu5OZVUnJXJmxfGLPAvFfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230588527185-qdoj7deupkvg8c0gfqkjs7re2r9ceukb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
