@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="@dimen/dp_40"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_weight="1"
         android:src="@drawable/happn" />
