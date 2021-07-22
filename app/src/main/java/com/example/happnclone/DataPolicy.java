@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.happnclone.Quiz.MaleFemaleCheck;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -42,6 +43,8 @@ public class DataPolicy extends AppCompatActivity {
                 signIn();
             }
         });
+
+        
     }
 
     public void signIn() {
@@ -59,6 +62,12 @@ public class DataPolicy extends AppCompatActivity {
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
+            if (task.isSuccessful()){
+                Intent intent = new Intent(DataPolicy.this, MaleFemaleCheck.class);
+                startActivity(intent);
+            }
+
+
         }
     }
 

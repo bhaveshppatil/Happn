@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@color/white"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Quiz.quizOneWhyHappn">
 
     <RelativeLayout
@@ -13,41 +13,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <TextView
             android:id="@+id/edPages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1 of 7"
-            android:padding="16dp"
             android:gravity="center"
+            android:padding="16dp"
+            android:text="1 of 7"
+            android:textColor="@color/black"
             android:textSize="23dp"
-            android:textStyle="bold"
-            android:textColor="@color/black">
-        </TextView>
-
+            android:textStyle="bold"></TextView>
 
         <Button
             android:id="@+id/BtnSkip1Mag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="3dp"
             android:background="@color/white"
-            android:text="Skip"
-            android:textSize="20dp"
-            android:textColor="#0087b4"
             android:padding="16dp"
-            android:layout_alignParentRight="true" />
+            android:text="Skip"
+            android:textColor="#0087b4"
+            android:textSize="20dp" />
 
     </RelativeLayout>
+
     <View
         android:id="@+id/vUnderLine"
-        android:layout_below="@+id/RelativeView"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
-
+        android:layout_below="@+id/RelativeView"
+        android:background="@color/black" />
 
     <TextView
         android:id="@+id/TvMainEmoji"
@@ -60,52 +57,51 @@
         android:id="@+id/TvMainText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="what are you looking for on happn?"
-        android:textColor="@color/black"
-        android:textSize="23sp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:gravity="center"/>
+        android:fontFamily="@font/cantora_one"
+        android:gravity="center"
+        android:text="what are you looking for on happn?"
+        android:textColor="@color/black"
+        android:textSize="23sp" />
 
 
     <Button
         android:id="@+id/BtnOneMag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="A relatioship"
-        android:textColor="@color/black"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="44dp"
-        android:padding="12dp"
         android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"/>
+        android:background="@color/white"
+        android:padding="12dp"
+        android:text="A relatioship"
+        android:textColor="@color/black" />
 
 
     <Button
         android:id="@+id/BtnTwoMag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="Nothing serious"
-        android:padding="12dp"
-        android:textColor="@color/black"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"/>
+        android:background="@color/white"
+        android:padding="12dp"
+        android:text="Nothing serious"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/BtnThreeMag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="40dp"
         android:background="@color/white"
         android:padding="12dp"
         android:text="I'll know when i find it"
-        android:textColor="@color/black"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"/>
-
-
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

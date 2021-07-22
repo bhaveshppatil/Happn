@@ -63,6 +63,7 @@
         android:text="How tall are you?"
         android:textColor="@color/black"
         android:textSize="23sp"
+        android:fontFamily="@font/cantora_one"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:gravity="center"/>
@@ -84,7 +85,7 @@
         android:inputType="number"
         android:hint="Enter your height in cms"
         android:layout_margin="40dp"
-        android:background="#1F1B09"
+        android:background="@drawable/shape"
         android:padding="20dp"/>
 
     <Button

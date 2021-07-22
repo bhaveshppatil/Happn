@@ -63,6 +63,7 @@
         android:text="What two words best describe your ideal vacation ?"
         android:textColor="@color/black"
         android:textSize="23sp"
+        android:fontFamily="@font/cantora_one"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:gravity="center"/>

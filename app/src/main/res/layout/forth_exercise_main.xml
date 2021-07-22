@@ -62,6 +62,7 @@
         android:layout_height="wrap_content"
         android:text="What are your exercise habits?"
         android:textColor="@color/black"
+        android:fontFamily="@font/cantora_one"
         android:textSize="23sp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"

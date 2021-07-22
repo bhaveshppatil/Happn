@@ -63,6 +63,7 @@
         android:text="Which answer best describes your cooking skills?"
         android:textColor="@color/black"
         android:textSize="23sp"
+        android:fontFamily="@font/cantora_one"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:gravity="center"/>
