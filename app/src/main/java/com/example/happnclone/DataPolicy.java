@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.happnclone.Quiz.MaleFemaleCheck;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -73,10 +74,11 @@ public class DataPolicy extends AppCompatActivity {
                 String personId = acct.getId();
                 Uri personPhoto = acct.getPhotoUrl();
 
-                Intent intent = new Intent();
+                Intent intent = new Intent(DataPolicy.this, MaleFemaleCheck.class);
                 intent.putExtra("personPhoto", acct.getPhotoUrl());
                 Toast.makeText(DataPolicy.this, "Welcome " + personName + "to Happn App lets find yor " +
                         "girl .... ! UUREEEE ", Toast.LENGTH_LONG).show();
+                startActivity(intent);
             }
 
         } catch (ApiException e) {
