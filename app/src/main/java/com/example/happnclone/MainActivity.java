@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static int RC_SIGN_IN = 100;
     Button btnLoginView;
+    Button btnFacebookLogin;
     GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLoginView = findViewById(R.id.googleLogin);
+        btnFacebookLogin = findViewById(R.id.facebookLogin);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -47,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnFacebookLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FBTermsConditions.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

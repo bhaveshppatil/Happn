@@ -10,4 +10,7 @@
     <string name="PersonalizedAd">"To display ads that are relevant to you, HAPPN needs to access your device information. These ads are personalized according to your age range, gender and country or city.  "</string>
     <string name="Marketing">"Your consent is requested in order to keep you from receiving HAPPN ads on our partners’ websites and to direct our ads to prospects with a similar profile to yours. Some data (your device ID, email address and telephone number) are shared with our partners for this purpose.  "</string>
     <string name="Technical">"To provide you with an optimal experience, HAPPN is required to collect certain necessary information. You cannot configure this option.   "</string>
+    <string name="facebook_app_id">2940172476194792</string>
+    <string name="fb_login_protocol_scheme">fb2940172476194792</string>
+
 </resources>

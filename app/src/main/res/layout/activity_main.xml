@@ -34,14 +34,14 @@
         android:layout_weight="3">
 
         <Button
-            android:id="@+id/facbooklogin"
+            android:id="@+id/facebookLogin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_40"
             android:layout_marginEnd="@dimen/dp_40"
             android:background="@drawable/fcaebook"
             android:drawableLeft="@drawable/ion_logo_facebook"
-            android:paddingLeft="@dimen/dp_25"
+            android:paddingStart="@dimen/dp_25"
             android:text="Continue with Facebook"
             android:textColor="@color/white"
             android:textSize="18dp" />
