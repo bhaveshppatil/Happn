@@ -3,6 +3,8 @@
     package="com.example.happnclone">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HappnClone">
-        <activity android:name=".MainLayout.InviteFriend"></activity>
+        <activity android:name=".ChatData.ChatScreen"></activity>
+        <activity android:name=".MapView" />
+        <activity android:name=".MainLayout.InviteFriend" />
         <activity android:name=".MainLayout.Mypreferences" />
         <activity android:name=".MainLayout.Layout_MainActivity" />
         <activity android:name=".Quiz.VacationAdventure" />
@@ -35,6 +39,9 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

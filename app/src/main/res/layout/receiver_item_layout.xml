@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp">
+    <TextView
+        android:id="@+id/tvReceiverMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Hey there, What's up?"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>
