@@ -34,6 +34,7 @@ import java.util.Map;
 public class MapView extends AppCompatActivity implements OnMapReadyCallback{
 
     private static final int REQUEST_CODE = 101;
+    private static final int REQ_CODE = 99;
     GoogleMap gMap;
     TextView tvSatellite, tvMapView;
     SearchView srcView;
@@ -48,9 +49,6 @@ public class MapView extends AppCompatActivity implements OnMapReadyCallback{
         tvMapView = findViewById(R.id.tvMapView);
         tvSatellite = findViewById(R.id.tvSatellite);
         srcView = findViewById(R.id.srcView);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         srcView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -151,6 +149,10 @@ public class MapView extends AppCompatActivity implements OnMapReadyCallback{
             case REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     fetchLocation();
+                }else {
+                    String[] permission = {Manifest.permission.ACCESS_COARSE_LOCATION};
+                    ActivityCompat.requestPermissions(MapView.this, permission, REQ_CODE);
+
                 }
                 break;
         }

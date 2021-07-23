@@ -30,42 +30,43 @@
         android:id="@+id/LoginWithFacebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_weight="3">
 
         <Button
             android:id="@+id/facebookLogin"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_50"
+            android:layout_height="50dp"
             android:layout_marginStart="@dimen/dp_40"
             android:layout_marginEnd="@dimen/dp_40"
             android:background="@drawable/fcaebook"
             android:drawableLeft="@drawable/ion_logo_facebook"
-            android:paddingStart="@dimen/dp_25"
             android:text="Continue with Facebook"
             android:textColor="@color/white"
-            android:textSize="18dp" />
+            android:textAllCaps="false"
+            android:paddingStart="25dp"
+            android:textSize="18sp" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/LoginWithGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_weight="4">
 
         <Button
             android:id="@+id/googleLogin"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_50"
+            android:layout_height="50dp"
             android:layout_marginStart="@dimen/dp_40"
             android:layout_marginEnd="@dimen/dp_40"
             android:background="@drawable/google"
             android:drawableStart="@drawable/flat_color_icons_google"
             android:paddingStart="@dimen/dp_25"
+            android:textAllCaps="false"
             android:text="Continue with Google"
             android:textColor="@color/black"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
     </FrameLayout>
 
@@ -74,20 +75,21 @@
         android:id="@+id/LoginWithNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_weight="5">
 
         <Button
             android:id="@+id/numberlogin"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_50"
+            android:layout_height="50dp"
             android:layout_marginStart="@dimen/dp_40"
             android:layout_marginEnd="@dimen/dp_40"
             android:background="@drawable/number"
             android:paddingLeft="@dimen/dp_25"
             android:text="Continue with Phone Number"
+            android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
     </FrameLayout>
 
@@ -96,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="6"
         android:text="@string/Terms_And_Condition"
         android:textAlignment="center"
