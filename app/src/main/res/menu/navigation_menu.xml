@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/Meet"
+        android:icon="@drawable/ic_baseline_child_care_24"
+        android:title="Profile" />
+
+    <item android:id="@+id/chat"
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:title="Chats" />
+
+    <item android:id="@+id/Location"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="Location" />
+
+    <item android:id="@+id/Notification"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="Notification" />
+
+    <item android:id="@+id/Profile"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="Meet" />
+
+</menu>

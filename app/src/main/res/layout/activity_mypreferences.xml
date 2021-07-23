@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mypreference">
+
+    <!--    <androidx.appcompat.widget.SwitchCompat-->
+    <!--        android:id="@+id/swLocationUpdate"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:checked="true"-->
+    <!--        android:fontFamily="casual"-->
+    <!--        android:text="Heart"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:thumb="@drawable/thumb"-->
+    <!--        app:switchPadding="15dp"-->
+    <!--        app:thumbTint="@color/black"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:track="@drawable/track" />-->
+
+
+
+    <Button
+        android:id="@+id/btnbackarrow"
+        android:layout_width="40dp"
+        android:layout_margin="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnbackarrow"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="My Preferences"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/btnbackarrow"
+        android:orientation="vertical"
+        android:layout_height="0dp" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+
+                android:id="@+id/imageprefrence"
+                android:layout_margin="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/lion"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="happn premimum more features, more fun!"
+                android:textColor="@color/white"
+                android:id="@+id/tv1"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/btnpremium"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/ic_rectangle_8"
+                android:padding="10dp"
+                android:text="upgrade to premimun"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_below="@id/tv1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv2"
+                android:layout_height="wrap_content"
+                android:text="I want to find........."
+                android:layout_below="@id/imageprefrence"
+                android:layout_margin="20dp"
+                android:textColor="#000080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women"
+                android:id="@+id/women"
+                android:textStyle="bold"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="casual"
+                android:id="@+id/tv3"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv2"
+                android:thumb="@drawable/thumb"
+                android:layout_margin="26dp"
+                app:thumbTint="@color/black"
+                app:track="@drawable/track" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men"
+                android:id="@+id/men"
+                android:textStyle="bold"
+                android:layout_below="@id/women"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="casual"
+                android:textSize="20sp"
+                android:layout_below="@id/tv3"
+                android:layout_alignParentEnd="true"
+                android:thumb="@drawable/thumb"
+                android:layout_marginRight="26sp"
+                app:thumbTint="@color/black"
+                app:track="@drawable/track" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv4"
+                android:layout_below="@id/men"
+                android:text="18 to 42 years old"
+                android:layout_margin="20dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Define your own Critera"
+                android:textSize="15dp"
+                android:layout_below="@id/tv4"
+                android:id="@+id/tv6"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv6"
+                android:id="@+id/tv7"
+                android:text="Save time by only seeing the profilesthat meet your critiera"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/imageprefrence"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="260dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/human"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/tv8"
+                android:background="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tv7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule Invisibility"
+                android:layout_below="@id/tv8"
+                android:textSize="15dp"
+                android:id="@+id/tv9"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv9"
+                android:id="@+id/tv10"
+                android:text="use this when you dont want to cross path with any one "
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv7"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv11"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/pauseclock"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invisible for 8hrs"
+                android:id="@+id/tv12"
+                android:layout_below="@id/tv10"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv11"
+                android:id="@+id/switch0"
+                android:checked="false"
+                android:thumb="@drawable/thumb"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="20dp"
+                app:track="@drawable/track"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/v2"
+                android:background="@color/black"
+                android:layout_below="@id/tv12"
+                android:layout_marginTop="20dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More Privacy"
+                android:layout_below="@id/v2"
+                android:textSize="15dp"
+                android:id="@+id/tv13"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv13"
+                android:id="@+id/tv14"
+                android:text="Choose the Confirmation you want to share"
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hide my age"
+                android:id="@+id/tv15"
+                android:layout_below="@id/tv14"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch3"
+                android:layout_below="@id/v2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="58dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hide my Online Status"
+                android:id="@+id/tv16"
+                android:layout_below="@id/tv15"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch4"
+                android:layout_below="@id/switch3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hide my distance"
+                android:id="@+id/tv17"
+                android:layout_below="@id/tv16"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch5"
+                android:layout_below="@id/switch4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share your crossing location"
+                android:layout_below="@id/tv17"
+                android:textSize="15dp"
+                android:id="@+id/tv18"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share my Location"
+                android:paddingBottom="100dp"
+                android:id="@+id/tv19"
+                android:layout_below="@id/tv18"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch6"
+                android:layout_below="@id/switch5"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/v3"
+                android:background="@color/black"
+                android:layout_below="@id/switch6"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

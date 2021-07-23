@@ -2,9 +2,12 @@ package com.example.happnclone.Quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
+import com.example.happnclone.MainLayout.Layout_MainActivity;
 import com.example.happnclone.R;
 
 public class VacationAdventure extends AppCompatActivity {
@@ -24,6 +27,38 @@ public class VacationAdventure extends AppCompatActivity {
         mBtnSkipCB = findViewById(R.id.BtnSkipCB);
         mBtnTwoCB = findViewById(R.id.BtnTwoCB);
         mBtnThreeCB = findViewById(R.id.BtnThreeCB);
+
+        mBtnSkipCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VacationAdventure.this, Layout_MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnOneCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VacationAdventure.this, Layout_MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnTwoCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VacationAdventure.this, Layout_MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnThreeCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VacationAdventure.this, Layout_MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

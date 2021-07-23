@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyAccount">
+
+    <TextView
+        android:id="@+id/myaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="My Account"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/lion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myaccount" />
+
+
+    <Button
+        android:id="@+id/btnpremium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/ic_rectangle_8"
+        android:padding="10dp"
+        android:text="upgrade to premimun"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivimage" />
+
+    <ImageView
+        android:id="@+id/ivcontacts"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/contacts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnpremium" />
+
+    <Button
+        android:id="@+id/btnmypreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintStart_toEndOf="@id/ivcontacts"
+        app:layout_constraintTop_toBottomOf="@id/btnpremium" />
+
+    <TextView
+        android:id="@+id/tvmypreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="My Preferences"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivcontacts"
+        app:layout_constraintTop_toTopOf="@id/btnmypreferences" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="choose who you like to cross path with"
+        app:layout_constraintStart_toEndOf="@id/ivcontacts"
+        app:layout_constraintTop_toBottomOf="@id/tvmypreferences" />
+
+    <ImageView
+        android:id="@+id/ivfavourites"
+        style="@style/image"
+        android:background="@drawable/favourite"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/ivcontacts" />
+
+    <Button
+        android:id="@+id/btnfavourites"
+        style="@style/button"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/ivcontacts"
+        app:layout_constraintTop_toBottomOf="@id/btnmypreferences" />
+
+    <TextView
+        android:id="@+id/tvfavourites"
+        style="@style/textclick"
+        android:text="My Favourites"
+        app:layout_constraintStart_toEndOf="@id/ivcontacts"
+        app:layout_constraintTop_toTopOf="@id/btnfavourites" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="you sent them a flash note!"
+        app:layout_constraintStart_toEndOf="@id/ivfavourites"
+        app:layout_constraintTop_toBottomOf="@id/tvfavourites" />
+
+    <ImageView
+        android:id="@+id/ivinvite"
+        style="@style/image"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/invitefriend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivfavourites" />
+
+    <Button
+        android:id="@+id/btnfriend"
+        style="@style/button"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/ivfavourites"
+        app:layout_constraintTop_toBottomOf="@id/btnfavourites" />
+
+    <TextView
+        android:id="@+id/tvinvite"
+        style="@style/textclick"
+        android:text="Invite Friends"
+        app:layout_constraintStart_toEndOf="@id/ivinvite"
+        app:layout_constraintTop_toTopOf="@id/btnfriend" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Invite your Friend and earn flash notes"
+        app:layout_constraintStart_toEndOf="@id/ivinvite"
+        app:layout_constraintTop_toBottomOf="@id/tvinvite" />
+
+    <ImageView
+        android:id="@+id/ivsetting"
+        style="@style/image"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivinvite" />
+
+    <Button
+        android:id="@+id/btnsetting"
+        style="@style/button"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/ivsetting"
+        app:layout_constraintTop_toBottomOf="@id/btnfriend" />
+
+    <TextView
+        android:id="@+id/tvsetting"
+        style="@style/textclick"
+        android:text="App Setting"
+        app:layout_constraintStart_toEndOf="@id/ivsetting"
+        app:layout_constraintTop_toTopOf="@id/btnsetting" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Manage your Notification and, accounts "
+        app:layout_constraintStart_toEndOf="@id/ivsetting"
+        app:layout_constraintTop_toBottomOf="@id/tvsetting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HappnClone">
-        <activity android:name=".Quiz.VacationAdventure"></activity>
+        <activity android:name=".MainLayout.InviteFriend"></activity>
+        <activity android:name=".MainLayout.Mypreferences" />
+        <activity android:name=".MainLayout.Layout_MainActivity" />
+        <activity android:name=".Quiz.VacationAdventure" />
         <activity android:name=".Quiz.Exercise_main" />
         <activity android:name=".Quiz.NightLifeFifth" />
         <activity android:name=".Quiz.CodingQuizSixth" />

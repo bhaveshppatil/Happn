@@ -12,5 +12,7 @@
     <string name="Technical">"To provide you with an optimal experience, HAPPN is required to collect certain necessary information. You cannot configure this option.   "</string>
     <string name="facebook_app_id">2940172476194792</string>
     <string name="fb_login_protocol_scheme">fb2940172476194792</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
