@@ -80,12 +80,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_marginStart="@dimen/dp_20"
+                        app:cardCornerRadius="80dp"
+                        android:layout_margin="5dp"
+                        android:layout_height="80dp" >
+
+
                     <ImageView
                         android:id="@+id/ContactProfile1"
                         android:layout_width="60dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="20dp"
-                        android:src="@drawable/men_contact" />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/couple" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/tvPersonName1"
@@ -93,7 +103,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/cantora_one"
                         android:gravity="center"
-                        android:text="Person Name"
+                        android:text="Smitha Samphu"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -112,12 +122,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_marginStart="@dimen/dp_20"
+                        app:cardCornerRadius="80dp"
+                        android:layout_margin="5dp"
+                        android:layout_height="80dp" >
+
+
+
                     <ImageView
                         android:id="@+id/ContactProfile2"
                         android:layout_width="60dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="20dp"
-                        android:src="@drawable/women_contact" />
+                        android:src="@drawable/priyanka" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/tvPersonName2"
@@ -125,7 +145,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/cantora_one"
                         android:gravity="center"
-                        android:text="Person Name"
+                        android:text="Priyanka chopra"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -144,12 +164,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_marginStart="@dimen/dp_20"
+                        app:cardCornerRadius="80dp"
+                        android:layout_margin="5dp"
+                        android:layout_height="80dp" >
+
                     <ImageView
                         android:id="@+id/ContactProfile3"
                         android:layout_width="60dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="20dp"
-                        android:src="@drawable/women_contact" />
+                        android:src="@drawable/girls" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/tvPersonName3"
@@ -157,7 +185,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/cantora_one"
                         android:gravity="center"
-                        android:text="Person Name"
+                        android:text="Samu Clinto"
                         android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -176,12 +204,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp">
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_marginStart="@dimen/dp_20"
+                        app:cardCornerRadius="80dp"
+                        android:layout_margin="5dp"
+                        android:layout_height="80dp" >
+
                     <ImageView
                         android:id="@+id/ContactProfile4"
                         android:layout_width="60dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="20dp"
-                        android:src="@drawable/men_contact" />
+                        android:src="@drawable/girls" />
+                    \ </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/tvPersonName4"
