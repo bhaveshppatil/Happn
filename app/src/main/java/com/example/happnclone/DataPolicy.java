@@ -82,6 +82,7 @@ public class DataPolicy extends AppCompatActivity {
                 PreferenceHelper.writeStringToPreference("personname", PeronName);
 
 
+
                 Toast.makeText(DataPolicy.this, "Welcome " + personName + "to Happn App lets find yor " +
                         "girl .... ! UUREEEE ", Toast.LENGTH_LONG).show();
                 startActivity(intent);
