@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
 
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,25 +24,26 @@
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-
         android:id="@+id/cardview"
-        app:cardCornerRadius="@dimen/dp_50"
-        android:background="@android:color/transparent"
-        android:layout_below="@+id/tvDiscover"
-        android:layout_height="wrap_content" >
+        android:layout_width="wrap_content"
 
-    <com.yuyakaido.android.cardstackview.CardStackView
-
-        android:id="@+id/stackview"
-        android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tvDiscover"
         android:layout_centerInParent="true"
-        android:layout_margin="20dp">
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="@dimen/dp_50">
 
-    </com.yuyakaido.android.cardstackview.CardStackView>
+        <com.yuyakaido.android.cardstackview.CardStackView
+
+            android:id="@+id/stackview"
+            android:layout_width="300dp"
+            android:layout_height="500dp"
+            android:layout_below="@+id/tvDiscover"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp">
+
+        </com.yuyakaido.android.cardstackview.CardStackView>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -54,8 +54,8 @@
         android:layout_height="100dp"
         android:layout_below="@id/cardview"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="180dp"
+        android:layout_marginTop="10dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/hearts" />
@@ -65,12 +65,26 @@
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:layout_below="@id/cardview"
-
-        android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:visibility="invisible"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/loveandkiss" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/cry"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/cardview"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/cry" />
+
+
 
 
 

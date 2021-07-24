@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ import com.yuyakaido.android.cardstackview.Direction;
 import com.yuyakaido.android.cardstackview.StackFrom;
 import com.yuyakaido.android.cardstackview.SwipeableMethod;
 
+import java.io.DataInput;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
@@ -41,7 +43,7 @@ public class MeetFragment extends Fragment {
     private List<ProfileModel> profileModelList = new ArrayList<>();
     private CardStackLayoutManager manager;
     private FormulaAdaptor formulaAdaptor;
-    private LottieAnimationView hearts;
+    private LottieAnimationView hearts, love, cry;
     private CardStackView cardStackView;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -94,6 +96,8 @@ public class MeetFragment extends Fragment {
         setRecycleAdaptopr();
         cardStackView = view.findViewById(R.id.stackview);
         hearts = view.findViewById(R.id.hearts);
+        love = view.findViewById(R.id.love);
+        cry = view.findViewById(R.id.cry);
 
         manager = new CardStackLayoutManager(getActivity(), new CardStackListener() {
             @Override
@@ -104,47 +108,61 @@ public class MeetFragment extends Fragment {
             @Override
             public void onCardSwiped(Direction direction) {
 
-                if (direction == Direction.Left) {
 
-                    Toast.makeText(getActivity(), "We will look for others", Toast.LENGTH_SHORT).show();
+                switch (direction) {
+                    case Left:
+                        Toast.makeText(getActivity(), "will look for others\"", Toast.LENGTH_SHORT).show();
+                        cry.setVisibility(View.VISIBLE);
 
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                cry.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+                        break;
+                    case Right:
+                        Toast.makeText(getActivity(), "Hey! its a Match", Toast.LENGTH_SHORT).show();
+                        love.setVisibility(View.VISIBLE);
 
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                love.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+                        break;
                 }
-
-
-                if (direction == Direction.Right)
-
-                    Toast.makeText(getActivity(), "Hey ! its a match", Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public void onCardRewound() {
+        @Override
+        public void onCardRewound () {
 
-            }
+        }
 
-            @Override
-            public void onCardCanceled() {
+        @Override
+        public void onCardCanceled () {
 
-            }
+        }
 
-            @Override
-            public void onCardAppeared(View view, int position) {
+        @Override
+        public void onCardAppeared (View view,int position){
 
-            }
+        }
 
-            @Override
-            public void onCardDisappeared(View view, int position) {
+        @Override
+        public void onCardDisappeared (View view,int position){
 
-            }
-        });
+        }
+    });
 
-        cardswipe();
+    cardswipe();
 
-        startBackgroungThread();
+    startBackgroungThread();
 
 
         return view;
-    }
+}
 
 
     private void cardswipe() {
@@ -168,7 +186,6 @@ public class MeetFragment extends Fragment {
         formulaAdaptor = new FormulaAdaptor(profileModelList);
 
     }
-
 
 
     private Runnable runnable = new Runnable() {
@@ -216,6 +233,7 @@ public class MeetFragment extends Fragment {
         profileModelList = responseModel.getProfile();
         updateUI();
     }
+
     private void updateUI() {
 
         getActivity().runOnUiThread(new Runnable() {
