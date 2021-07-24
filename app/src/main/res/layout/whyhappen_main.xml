@@ -22,7 +22,7 @@
             android:text="1 of 7"
             android:textColor="@color/black"
             android:textSize="23dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/BtnSkip1Mag"
@@ -73,7 +73,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="44dp"
         android:layout_marginRight="40dp"
-        android:background="@color/white"
+        android:background="@drawable/background_shape"
         android:padding="12dp"
         android:text="A relatioship"
         android:textColor="@color/black" />
@@ -86,7 +86,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp"
-        android:background="@color/white"
+        android:background="@drawable/background_shape"
         android:padding="12dp"
         android:text="Nothing serious"
         android:textColor="@color/black" />
@@ -98,7 +98,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp"
-        android:background="@color/white"
+        android:background="@drawable/background_shape"
         android:padding="12dp"
         android:text="I'll know when i find it"
         android:textColor="@color/black" />

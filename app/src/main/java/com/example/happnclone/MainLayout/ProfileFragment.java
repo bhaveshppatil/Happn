@@ -1,5 +1,6 @@
 package com.example.happnclone.MainLayout;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,7 +26,8 @@ public class ProfileFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     Button btnmypreferences, btnfriend, btnSetting;
-    TextView tvsetting,myaccount;
+    TextView tvsetting, myaccount, btnNeedHep;
+    AlertDialog.Builder builder;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -69,10 +71,20 @@ public class ProfileFragment extends Fragment {
 
         btnmypreferences = view.findViewById(R.id.btnmypreferences);
         btnfriend = view.findViewById(R.id.btnfriend);
-        myaccount=view.findViewById(R.id.myaccount);
+        myaccount = view.findViewById(R.id.myaccount);
         tvsetting = view.findViewById(R.id.tvsetting);
         btnSetting = view.findViewById(R.id.btnsetting);
+        btnNeedHep = view.findViewById(R.id.btnNeedHep);
 
+        btnNeedHep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Need Help!");
+                builder.setMessage("Terms and Conditions");
+                builder.show();
+            }
+        });
 
         PreferenceHelper.getInstance(getActivity());
         String name = PreferenceHelper.getIntSharedPreferenceKey("personname");

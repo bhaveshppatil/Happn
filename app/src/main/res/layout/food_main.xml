@@ -73,10 +73,10 @@
         android:id="@+id/BtnOneFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:text="i'm a microwave master"
         android:textColor="@color/black"
         android:layout_marginTop="44dp"
+        android:background="@drawable/background_shape"
         android:padding="12dp"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"/>
@@ -86,9 +86,9 @@
         android:id="@+id/BtnTwoFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:text="I'm a delivery expert"
         android:padding="12dp"
+        android:background="@drawable/background_shape"
         android:textColor="@color/black"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp"
@@ -98,15 +98,12 @@
         android:id="@+id/BtnThreeFood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:padding="12dp"
+        android:background="@drawable/background_shape"
         android:text="i know a few good recipes"
         android:textColor="@color/black"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"/>
-
-
-
 
 </LinearLayout>

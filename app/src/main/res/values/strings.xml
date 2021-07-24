@@ -14,7 +14,8 @@
     <string name="fb_login_protocol_scheme">fb2940172476194792</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Female"><u>Female</u></string>
+    <string name="Male"><u>Male</u></string>
     <string name="map_api_key" translatable="false">AIzaSyDEg2fiadvCt-Yq9TlwOPMKFBziRBea1zA</string>
-
 
 </resources>

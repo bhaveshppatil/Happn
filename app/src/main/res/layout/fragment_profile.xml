@@ -7,8 +7,6 @@
     android:orientation="vertical"
     tools:context=".MyAccount">
 
-
-
     <TextView
         android:id="@+id/myaccount"
         android:layout_width="wrap_content"
@@ -224,8 +222,5 @@
         android:text="FAQ, tutorias and contact"
         app:layout_constraintStart_toEndOf="@id/ivNeedHep"
         app:layout_constraintTop_toBottomOf="@id/tvNeedHep" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
