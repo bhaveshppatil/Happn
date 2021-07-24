@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardCornerRadius="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageSwitcher
+            android:layout_width="wrap_content"
+            android:id="@+id/imageswitcher"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivimage3"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/ivimage"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/ivimage2"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY" />
+
+        <Button
+            android:id="@+id/btndetails"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ivimage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-15dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circle"
+            android:text="i"
+            android:textAllCaps="false"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ivimage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/rectangle9" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivimage"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="-10dp"
+            android:text="Priyanka Chopra"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivimage"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-8dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/tvName"
+            android:text=", 35" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_marginStart="22dp"
+            android:textColor="@color/black"
+            android:text="5 miles away" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

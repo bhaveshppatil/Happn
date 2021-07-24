@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Quiz.QuizIntro">
 
-    <ImageView
-        android:id="@+id/girlEmoji"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/child"
-        android:layout_marginStart="@dimen/dp_30"
-        android:outlineSpotShadowColor="#FFA500"
 
-        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/love"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loveandkiss" />
 
     <ImageView
         android:id="@+id/cakeEmoji"
@@ -73,16 +75,16 @@
 
     <Button
         android:id="@+id/BtnLetsGO"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/TvUserGreetingText"
         android:text="Lets Go!"
-        android:textColor="@color/white"
-        android:background="#0087b4"
+        android:textColor="@color/black"
+        android:background="@drawable/ic_rectangle_8"
         android:textSize="23dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginRight="29dp" />
+
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_centerHorizontal="true"/>
 
 
 

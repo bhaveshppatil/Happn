@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.happnclone.PreferenceHelper;
 import com.example.happnclone.R;
 
 /**
@@ -24,7 +25,7 @@ public class ProfileFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     Button btnmypreferences, btnfriend, btnSetting;
-    TextView tvsetting;
+    TextView tvsetting,myaccount;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -68,8 +69,14 @@ public class ProfileFragment extends Fragment {
 
         btnmypreferences = view.findViewById(R.id.btnmypreferences);
         btnfriend = view.findViewById(R.id.btnfriend);
+        myaccount=view.findViewById(R.id.myaccount);
         tvsetting = view.findViewById(R.id.tvsetting);
         btnSetting = view.findViewById(R.id.btnsetting);
+
+
+        PreferenceHelper.getInstance(getActivity());
+        String name = PreferenceHelper.getIntSharedPreferenceKey("personname");
+        myaccount.setText(name);
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

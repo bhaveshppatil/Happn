@@ -75,7 +75,13 @@ public class DataPolicy extends AppCompatActivity {
                 Uri personPhoto = acct.getPhotoUrl();
 
                 Intent intent = new Intent(DataPolicy.this, MaleFemaleCheck.class);
-                intent.putExtra("personPhoto", acct.getPhotoUrl());
+                intent.putExtra("PersonName", personName);
+
+                PreferenceHelper.getInstance(DataPolicy.this);
+                String PeronName = personGivenName;
+                PreferenceHelper.writeStringToPreference("personname", PeronName);
+
+
                 Toast.makeText(DataPolicy.this, "Welcome " + personName + "to Happn App lets find yor " +
                         "girl .... ! UUREEEE ", Toast.LENGTH_LONG).show();
                 startActivity(intent);

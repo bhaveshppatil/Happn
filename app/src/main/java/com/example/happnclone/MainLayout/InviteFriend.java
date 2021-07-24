@@ -21,8 +21,9 @@ public class InviteFriend extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invite_friend);
         dialog = new Dialog(this);
+        referpeople = findViewById(R.id.referpeople);
 
-            referpeople.setOnClickListener(new View.OnClickListener() {
+        referpeople.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openwindialogue();

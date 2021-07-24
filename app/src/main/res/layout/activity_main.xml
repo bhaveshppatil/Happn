@@ -17,13 +17,14 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:layout_marginStart="30dp"
+        android:paddingTop="@dimen/dp_25"
         android:layout_weight="2"
-        android:text="Find The People You've Crossed Paths with"
+        android:text=" Find The \n People \n You've \n Crossed \n Paths with"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="65sp"
+        android:textSize="60dp"
         android:textStyle="bold" />
 
     <FrameLayout
@@ -78,18 +79,6 @@
         android:layout_marginTop="5dp"
         android:layout_weight="5">
 
-        <Button
-            android:id="@+id/numberlogin"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="@dimen/dp_40"
-            android:layout_marginEnd="@dimen/dp_40"
-            android:background="@drawable/number"
-            android:paddingLeft="@dimen/dp_25"
-            android:text="Continue with Phone Number"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
 
     </FrameLayout>
 
@@ -97,7 +86,7 @@
         android:id="@+id/tvTermsAndCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
         android:layout_weight="6"
         android:text="@string/Terms_And_Condition"

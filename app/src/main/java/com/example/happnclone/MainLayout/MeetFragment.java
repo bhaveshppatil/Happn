@@ -4,12 +4,31 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.LinearInterpolator;
+import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.example.happnclone.Match.FormulaAdaptor;
+import com.example.happnclone.ProfileModel;
 import com.example.happnclone.R;
+import com.example.happnclone.ResponseModel;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
+import com.yuyakaido.android.cardstackview.CardStackListener;
+import com.yuyakaido.android.cardstackview.CardStackView;
+import com.yuyakaido.android.cardstackview.Direction;
+import com.yuyakaido.android.cardstackview.StackFrom;
+import com.yuyakaido.android.cardstackview.SwipeableMethod;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +36,13 @@ import com.example.happnclone.R;
  * create an instance of this fragment.
  */
 public class MeetFragment extends Fragment {
+
+
+    private List<ProfileModel> profileModelList = new ArrayList<>();
+    private CardStackLayoutManager manager;
+    private FormulaAdaptor formulaAdaptor;
+    private LottieAnimationView hearts;
+    private CardStackView cardStackView;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,6 +88,142 @@ public class MeetFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meet, container, false);
+        View view = inflater.inflate(R.layout.fragment_meet, container, false);
+
+//        initviews(view);
+        setRecycleAdaptopr();
+        cardStackView = view.findViewById(R.id.stackview);
+        hearts = view.findViewById(R.id.hearts);
+
+        manager = new CardStackLayoutManager(getActivity(), new CardStackListener() {
+            @Override
+            public void onCardDragging(Direction direction, float ratio) {
+
+            }
+
+            @Override
+            public void onCardSwiped(Direction direction) {
+
+                if (direction == Direction.Left) {
+
+                    Toast.makeText(getActivity(), "We will look for others", Toast.LENGTH_SHORT).show();
+
+
+                }
+
+
+                if (direction == Direction.Right)
+
+                    Toast.makeText(getActivity(), "Hey ! its a match", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCardRewound() {
+
+            }
+
+            @Override
+            public void onCardCanceled() {
+
+            }
+
+            @Override
+            public void onCardAppeared(View view, int position) {
+
+            }
+
+            @Override
+            public void onCardDisappeared(View view, int position) {
+
+            }
+        });
+
+        cardswipe();
+
+        startBackgroungThread();
+
+
+        return view;
+    }
+
+
+    private void cardswipe() {
+        manager.setStackFrom(StackFrom.None);
+        manager.getItemCount();
+        manager.setVisibleCount(20);
+        manager.setTranslationInterval(3.0f);
+        manager.setScaleInterval(1.195f);
+        manager.setSwipeThreshold(0.3f);
+        manager.setMaxDegree(15f);
+        manager.setDirections(Direction.FREEDOM);
+        manager.setCanScrollHorizontal(true);
+        manager.setSwipeableMethod(SwipeableMethod.AutomaticAndManual);
+        manager.setOverlayInterpolator(new LinearInterpolator());
+        formulaAdaptor = new FormulaAdaptor(profileModelList);
+        cardStackView.setLayoutManager(manager);
+        cardStackView.setAdapter(formulaAdaptor);
+    }
+
+    private void setRecycleAdaptopr() {
+        formulaAdaptor = new FormulaAdaptor(profileModelList);
+
+    }
+
+
+
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            readJsonfromAssests();
+        }
+    };
+
+    private void startBackgroungThread() {
+        Thread thread = new Thread(runnable);
+        thread.start();
+    }
+
+
+    private void readJsonfromAssests() {
+
+        try {
+            InputStream inputStream = getContext().getAssets().open("formula.json");
+            int data = inputStream.read();
+
+            StringBuilder builder = new StringBuilder();
+
+            while (data != -1) {
+                char ch = (char) data;
+                builder.append(ch);
+
+                data = inputStream.read();
+            }
+
+            buildPOJOFromJSON(builder);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void buildPOJOFromJSON(StringBuilder builder) {
+        String json = builder.toString();
+        Gson gson = new Gson();
+        Type type = new TypeToken<ResponseModel>() {
+        }.getType();
+        ResponseModel responseModel = gson.fromJson(json, type);
+        profileModelList = responseModel.getProfile();
+        updateUI();
+    }
+    private void updateUI() {
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                formulaAdaptor.updateData(profileModelList);
+            }
+        });
     }
 }

@@ -1,60 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bluewhiteimage" />
+
+    <TextView
+        android:id="@+id/tvDiscover"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
         android:layout_margin="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/circle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Discover"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnclear"
-        android:layout_width="62dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/ic_baseline_clear_24"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/circle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:id="@+id/cardview"
+        app:cardCornerRadius="@dimen/dp_50"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/tvDiscover"
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/btnlove"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/ic_baseline_favorite_24"
-        app:layout_constraintStart_toStartOf="@id/view3"
-        app:layout_constraintTop_toTopOf="@id/view2" />
+    <com.yuyakaido.android.cardstackview.CardStackView
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/stackview"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_below="@+id/tvDiscover"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp">
+
+    </com.yuyakaido.android.cardstackview.CardStackView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@id/cardview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="180dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/hearts" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/love"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@id/cardview"
+
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loveandkiss" />
+
+
+
+</RelativeLayout>

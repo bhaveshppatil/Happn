@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".MyAccount">
 
+
+
     <TextView
         android:id="@+id/myaccount"
         android:layout_width="wrap_content"

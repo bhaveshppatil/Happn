@@ -1,0 +1,77 @@
+{
+  "Profile":[
+    {
+      "Name":"Priyanka Chopra",
+      "Age":"32",
+      "City": "Stay in Mumbai",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Jogging is a good habit ",
+      "Hobbie4":" Party freaker",
+      "Hobbie5":" Late Night Parites ",
+      "Hobbie6":" Travlled around 20+ countires ",
+      "Photo2": "https://www.moviemaxima.com/wp-content/uploads/2019/02/Priyanka-chopra-picture-7.jpg" ,
+      "Photo1":"https://www.newdvdreleasedates.com/images/profiles/priyanka-chopra-13.jpg",
+      "Photo3" : "https://www.newdvdreleasedates.com/images/profiles/priyanka-chopra-13.jpg"
+    },
+    {
+      "Name":"Rashmika Mandhana",
+      "Age":"25",
+      "City":"Stay in Bangalore",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Reading is a good habit ",
+      "Hobbie4":" Party freaker",
+      "Hobbie5":" Driving like a lot",
+      "Hobbie6":" Travlled around 20+ countires ",
+      "Photo2":"https://santoshammagazine.com/wp-content/uploads/2020/07/Rashmika-Mandanna-Latest-Photos-7.jpg",
+      "Photo1":"https://i.pinimg.com/originals/a1/ae/2f/a1ae2f74ae628c5a8b3446e00a23cf77.jpg"
+    },
+    {
+      "Name":"Aishwarya Rai",
+      "Age":"36",
+      "City":"Stay in Delhi",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Yoga is a good habit ",
+      "Hobbie4":" Family Type",
+      "Hobbie5":" Listing to old songs ",
+      "Hobbie6":" Robo - 2 is a Favorite ",
+      "Photo2":"https://assets.vogue.in/photos/5ff81dddc53325b92110a807/2:3/w_886,h_1329,c_limit/10%20beauty%20and%20wellness%20tricks%20you%20can%20learn%20from%20Aishwarya%20Rai%20Bachchan's%20Instagram.jpg",
+      "Photo1":"https://resizing.flixster.com/Bd2OyvYZnLi8VMPky1SeyQzKKEY=/506x652/v2/https://flxt.tmsimg.com/v9/AllPhotos/207807/207807_v9_ba.jpg"
+    },
+    {
+      "Name":"Alia Bhat",
+      "Age":"45",
+      "City":"Stay in Mumbai",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Jogging is a good habit ",
+      "Hobbie4":" Party freaker",
+      "Hobbie5":" Late Night Parites ",
+      "Hobbie6":" Travlled around 20+ countires ",
+      "Photo2":"https://data1.ibtimes.co.in/en/full/726304/alia-bhatt.jpg",
+      "Photo1":"https://img.odishatv.in/wp-content/uploads/2020/09/Alia-Bhatt-1.jpg"
+    },
+    {
+      "Name":"Kajal Agarwal",
+      "Age":"29",
+      "City":"Stay in Gujurath",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Jogging is a good habit ",
+      "Hobbie4":" Party freaker",
+      "Hobbie5":" Late Night Parites ",
+      "Hobbie6":" Travlled around 20+ countires ",
+      "Photo2":"https://www.mwallpapers.com/photos/celebrities/kajal-agarwal/kajal-agarwalhd-wallpapers-desktop-background-android-iphone-1080p-4k-vg9ia.jpg?v=1576592048",
+      "Photo1":"https://tse1.mm.bing.net/th?id=OIP.l0sStmWlkF--SQCfFCja0AHaKW&pid=Api&P=0&w=300&h=300"
+    },
+    {
+      "Name":"Katrina Kaif",
+      "Age":"36",
+      "City":"Stay in Gujurath",
+      "Hobbie2":" I acted around 50+ movies ",
+      "Hobbie3":" Jogging is a good habit ",
+      "Hobbie4":" Party freaker",
+      "Hobbie5":" Late Night Parites ",
+      "Hobbie6":" Travlled around 20+ countires ",
+      "Photo2":"https://silverscreen.in/wp-content/uploads/2018/07/katrina-kaif-at-a-jewellery-showroom-launch-photos-0010.jpg",
+      "Photo1":"https://www.southdreamz.com/wp-content/uploads/2019/12/Katrina-Kaif-looks-ethereal-in-a-dazzling-saree-7-586x875.jpg"
+    }
+  ]
+}
