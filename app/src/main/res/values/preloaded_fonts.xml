@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/artifika</item>
+        <item>@font/basic</item>
         <item>@font/cantora_one</item>
+        <item>@font/carme</item>
+        <item>@font/cutive</item>
+        <item>@font/domine</item>
         <item>@font/fenix</item>
+        <item>@font/poppins</item>
         <item>@font/poppins_light</item>
+        <item>@font/poppins_medium</item>
     </array>
 </resources>

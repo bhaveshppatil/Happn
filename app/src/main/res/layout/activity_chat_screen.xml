@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/chat_bg"
+    android:background="#4DA1BC"
     tools:context=".ChatData.ChatScreen">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/etChoice"
+        android:background="@drawable/happn_white"
         android:layout_marginBottom="25dp" />
 
     <EditText

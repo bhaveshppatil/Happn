@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HappnClone">
-        <activity android:name=".ChatData.ChatScreen"></activity>
+        <activity android:name=".MainLayout.AppSettings"></activity>
+        <activity android:name=".ChatData.ChatScreen" />
         <activity android:name=".MapView" />
         <activity android:name=".MainLayout.InviteFriend" />
         <activity android:name=".MainLayout.Mypreferences" />

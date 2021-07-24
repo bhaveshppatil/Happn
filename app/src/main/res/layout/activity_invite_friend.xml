@@ -23,9 +23,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="268dp"
-        android:text="Invite your Friend and earn free \n
-                     FlashNotes!"
+        android:text="Invite your Friend and earn free FlashNotes!"
         android:textSize="25dp"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold" />
 

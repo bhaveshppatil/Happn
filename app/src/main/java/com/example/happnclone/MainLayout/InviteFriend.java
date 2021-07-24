@@ -25,7 +25,6 @@ public class InviteFriend extends AppCompatActivity {
             referpeople.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 openwindialogue();
             }
         });
@@ -35,10 +34,7 @@ public class InviteFriend extends AppCompatActivity {
         dialog.setContentView(R.layout.win_layout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-
         Button okbtn = dialog.findViewById(R.id.okbutton);
-
-
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

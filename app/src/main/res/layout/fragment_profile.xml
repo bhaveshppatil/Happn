@@ -21,10 +21,10 @@
     <ImageView
         android:id="@+id/ivimage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_marginTop="20dp"
         android:scaleType="fitXY"
-        android:src="@drawable/lion"
+        android:src="@drawable/women_happy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myaccount" />
 
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="200dp"
         android:layout_marginRight="60dp"
         android:background="@drawable/btncolor"
         android:padding="10dp"
@@ -52,7 +52,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/contacts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnpremium" />
@@ -73,11 +73,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_light"
+        android:textSize="17sp"
+        android:textColor="@color/black"
         android:text="My Preferences"
-        android:textSize="15dp"
         app:layout_constraintStart_toEndOf="@id/ivcontacts"
         app:layout_constraintTop_toTopOf="@id/btnmypreferences" />
 
@@ -95,7 +95,7 @@
         style="@style/image"
         android:background="@drawable/favourite"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/ivcontacts" />
 
     <Button
@@ -109,6 +109,9 @@
         android:id="@+id/tvfavourites"
         style="@style/textclick"
         android:text="My Favourites"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="17sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/ivcontacts"
         app:layout_constraintTop_toTopOf="@id/btnfavourites" />
 
@@ -123,7 +126,7 @@
     <ImageView
         android:id="@+id/ivinvite"
         style="@style/image"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/invitefriend"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivfavourites" />
@@ -139,6 +142,9 @@
         android:id="@+id/tvinvite"
         style="@style/textclick"
         android:text="Invite Friends"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="17sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/ivinvite"
         app:layout_constraintTop_toTopOf="@id/btnfriend" />
 
@@ -154,7 +160,7 @@
     <ImageView
         android:id="@+id/ivsetting"
         style="@style/image"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/setting"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivinvite" />
@@ -170,6 +176,9 @@
         android:id="@+id/tvsetting"
         style="@style/textclick"
         android:text="App Setting"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="17sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/ivsetting"
         app:layout_constraintTop_toTopOf="@id/btnsetting" />
 
@@ -180,5 +189,41 @@
         android:text="Manage your Notification and, accounts "
         app:layout_constraintStart_toEndOf="@id/ivsetting"
         app:layout_constraintTop_toBottomOf="@id/tvsetting" />
+
+    <ImageView
+        android:id="@+id/ivNeedHep"
+        style="@style/image"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_baseline_help_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivsetting" />
+
+    <Button
+        android:id="@+id/btnNeedHep"
+        style="@style/button"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/ivsetting"
+        app:layout_constraintTop_toBottomOf="@id/btnsetting" />
+
+    <TextView
+        android:id="@+id/tvNeedHep"
+        style="@style/textclick"
+        android:text="Need Help"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/ivNeedHep"
+        app:layout_constraintTop_toTopOf="@id/btnNeedHep" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="FAQ, tutorias and contact"
+        app:layout_constraintStart_toEndOf="@id/ivNeedHep"
+        app:layout_constraintTop_toBottomOf="@id/tvNeedHep" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

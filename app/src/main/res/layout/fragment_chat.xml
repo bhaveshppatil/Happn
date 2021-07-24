@@ -117,7 +117,7 @@
                         android:layout_width="60dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="20dp"
-                        android:src="@drawable/men_contact" />
+                        android:src="@drawable/women_contact" />
 
                     <TextView
                         android:id="@+id/tvPersonName2"
@@ -149,7 +149,7 @@
                         android:layout_width="60dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="20dp"
-                        android:src="@drawable/men_contact" />
+                        android:src="@drawable/women_contact" />
 
                     <TextView
                         android:id="@+id/tvPersonName3"
@@ -219,7 +219,6 @@
                         android:id="@+id/tvPersonName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_toEndOf="@id/ContactProfile"
                         android:fontFamily="@font/cantora_one"
                         android:gravity="center"
                         android:text="Person Name"
