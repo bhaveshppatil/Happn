@@ -26,12 +26,22 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvDiscover"
         android:layout_centerInParent="true"
         android:background="@android:color/transparent"
         app:cardCornerRadius="@dimen/dp_50">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadinghearts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_spinner" />
 
         <com.yuyakaido.android.cardstackview.CardStackView
 
@@ -46,7 +56,6 @@
 
 
     </androidx.cardview.widget.CardView>
-
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/hearts"
@@ -76,16 +85,13 @@
         android:id="@+id/cry"
         android:layout_width="wrap_content"
         android:layout_height="120dp"
+        android:layout_below="@id/cardview"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:visibility="invisible"
         app:lottie_autoPlay="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/cardview"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/cry" />
-
-
-
 
 
 </RelativeLayout>

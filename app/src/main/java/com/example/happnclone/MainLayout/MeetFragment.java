@@ -12,6 +12,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.happnclone.MainActivity;
 import com.example.happnclone.Match.FormulaAdaptor;
 import com.example.happnclone.ProfileModel;
 import com.example.happnclone.R;
@@ -43,8 +44,9 @@ public class MeetFragment extends Fragment {
     private List<ProfileModel> profileModelList = new ArrayList<>();
     private CardStackLayoutManager manager;
     private FormulaAdaptor formulaAdaptor;
-    private LottieAnimationView hearts, love, cry;
+    private LottieAnimationView hearts, love, cry, loading;
     private CardStackView cardStackView;
+    int count = 0;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -98,6 +100,7 @@ public class MeetFragment extends Fragment {
         hearts = view.findViewById(R.id.hearts);
         love = view.findViewById(R.id.love);
         cry = view.findViewById(R.id.cry);
+        loading = view.findViewById(R.id.loadinghearts);
 
         manager = new CardStackLayoutManager(getActivity(), new CardStackListener() {
             @Override
@@ -113,7 +116,7 @@ public class MeetFragment extends Fragment {
                     case Left:
                         Toast.makeText(getActivity(), "will look for others\"", Toast.LENGTH_SHORT).show();
                         cry.setVisibility(View.VISIBLE);
-
+                        count++;
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -125,6 +128,7 @@ public class MeetFragment extends Fragment {
                         Toast.makeText(getActivity(), "Hey! its a Match", Toast.LENGTH_SHORT).show();
                         love.setVisibility(View.VISIBLE);
 
+                        count++;
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -133,36 +137,40 @@ public class MeetFragment extends Fragment {
                         }, 1000);
                         break;
                 }
+
+                if (count == profileModelList.size()) {
+                   loading.setVisibility(View.VISIBLE);
+                }
             }
 
-        @Override
-        public void onCardRewound () {
+            @Override
+            public void onCardRewound() {
 
-        }
+            }
 
-        @Override
-        public void onCardCanceled () {
+            @Override
+            public void onCardCanceled() {
 
-        }
+            }
 
-        @Override
-        public void onCardAppeared (View view,int position){
+            @Override
+            public void onCardAppeared(View view, int position) {
 
-        }
+            }
 
-        @Override
-        public void onCardDisappeared (View view,int position){
+            @Override
+            public void onCardDisappeared(View view, int position) {
 
-        }
-    });
+            }
+        });
 
-    cardswipe();
+        cardswipe();
 
-    startBackgroungThread();
+        startBackgroungThread();
 
 
         return view;
-}
+    }
 
 
     private void cardswipe() {

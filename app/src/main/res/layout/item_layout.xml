@@ -11,33 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-       <ViewFlipper
-           android:layout_width="match_parent"
-           android:autoStart="true"
-           android:flipInterval="2000"
-           android:inAnimation="@android:anim/slide_in_left"
-           android:outAnimation="@android:anim/slide_out_right"
-           android:id="@+id/slider"
-           android:layout_height="wrap_content" >
-
-
-        <ImageView
-            android:id="@+id/ivimage"
+        <ViewFlipper
+            android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="430dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitXY" />
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right">
 
-        <ImageView
-            android:id="@+id/ivimage2"
-            android:layout_width="match_parent"
-            android:layout_height="430dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitXY" />
 
-       </ViewFlipper>
+            <ImageView
+                android:id="@+id/ivimage"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/ivimage2"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY" />
+
+        </ViewFlipper>
 
 
         <Button
@@ -85,9 +85,9 @@
             android:layout_below="@id/slider"
             android:layout_marginStart="5dp"
             android:layout_marginTop="-8dp"
-            android:textColor="@color/black"
             android:layout_toEndOf="@id/tvName"
-            android:text=", 35" />
+            android:text=", 35"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tvDistance"
@@ -95,8 +95,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvName"
             android:layout_marginStart="22dp"
-            android:textColor="@color/black"
-            android:text="5 miles away" />
+            android:text="5 miles away"
+            android:textColor="@color/black" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
