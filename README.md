@@ -1,4 +1,4 @@
-<img alt="GIF" src="https://i.pinimg.com/originals/9e/a7/2e/9ea72ef078139ced289852e8a4ea0c5c.gif" width = 200/>
+<h1 align="center"> <img alt="GIF" src="https://github.com/bhaveshppatil/Happn/blob/master/Happn%20Screenshot's/happnIcon.jpeg" width = 200/></h1>
 
 <h1 align="center"> Clone of Happn Online Dating Application </h1>
 <p align="center"></p>
