@@ -11,57 +11,15 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.happnclone.PreferenceHelper;
+import com.example.happnclone.LoginDetail.PreferenceHelper;
 import com.example.happnclone.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    Button btnmypreferences, btnfriend, btnSetting;
-    TextView tvsetting, myaccount, btnNeedHep;
+    Button btnMyPreferences, btnFriend, btnSetting;
+    TextView setTextThing, myAccount, btnNeedHep;
     AlertDialog.Builder builder;
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,10 +27,10 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        btnmypreferences = view.findViewById(R.id.btnmypreferences);
-        btnfriend = view.findViewById(R.id.btnfriend);
-        myaccount = view.findViewById(R.id.myaccount);
-        tvsetting = view.findViewById(R.id.tvsetting);
+        btnMyPreferences = view.findViewById(R.id.btnmypreferences);
+        btnFriend = view.findViewById(R.id.btnfriend);
+        myAccount = view.findViewById(R.id.myaccount);
+        setTextThing = view.findViewById(R.id.tvsetting);
         btnSetting = view.findViewById(R.id.btnsetting);
         btnNeedHep = view.findViewById(R.id.btnNeedHep);
 
@@ -88,7 +46,7 @@ public class ProfileFragment extends Fragment {
 
         PreferenceHelper.getInstance(getActivity());
         String name = PreferenceHelper.getIntSharedPreferenceKey("personname");
-        myaccount.setText(name);
+        myAccount.setText(name);
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,16 +56,16 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        btnmypreferences.setOnClickListener(new View.OnClickListener() {
+        btnMyPreferences.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Mypreferences.class);
+                Intent intent = new Intent(getActivity(), MyPreferences.class);
                 startActivity(intent);
 
             }
         });
 
-        btnfriend.setOnClickListener(new View.OnClickListener() {
+        btnFriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent7 = new Intent(getActivity(), InviteFriend.class);

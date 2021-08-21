@@ -1,5 +1,6 @@
 package com.example.happnclone.ChatData;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,6 +30,7 @@ public class ChatScreen extends AppCompatActivity  {
         setRecyclerView();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void buildData() {
         if (etOption.getText().toString().equals("0")) {
             baseModelList.add(new SenderModel(etSendMsg.getText().toString()));

@@ -10,32 +10,32 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.happnclone.ProfileModel;
+import com.example.happnclone.LoginDetail.ProfileModel;
 import com.example.happnclone.R;
 
 public class FormulaViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView ivimage, ivimage2;
+    ImageView ivImage, ivImage2;
 
     TextView tvName, tvAge, tvDistance;
-    Button btndeatils;
+    Button btnDetails;
     ViewFlipper slider;
 
 
     public FormulaViewHolder(@NonNull View itemView) {
         super(itemView);
-        initviews(itemView);
+        initViews(itemView);
     }
 
-    private void initviews(View itemView) {
-        ivimage = itemView.findViewById(R.id.ivimage);
+    private void initViews(View itemView) {
+        ivImage = itemView.findViewById(R.id.ivimage);
         tvDistance = itemView.findViewById(R.id.tvDistance);
-        ivimage2 = itemView.findViewById(R.id.ivimage2);
+        ivImage2 = itemView.findViewById(R.id.ivimage2);
 
         tvName = itemView.findViewById(R.id.tvName);
         tvAge = itemView.findViewById(R.id.tvAge);
         slider = itemView.findViewById(R.id.slider);
-        btndeatils = itemView.findViewById(R.id.btndetails);
+        btnDetails = itemView.findViewById(R.id.btndetails);
 
     }
 
@@ -43,8 +43,8 @@ public class FormulaViewHolder extends RecyclerView.ViewHolder {
         tvName.setText(profileModel.getName());
         tvDistance.setText(profileModel.getCity());
         tvAge.setText(profileModel.getAge());
-        Glide.with(ivimage).load(profileModel.getPhoto1()).into(ivimage);
-        Glide.with(ivimage2).load(profileModel.getPhoto2()).into(ivimage2);
+        Glide.with(ivImage).load(profileModel.getPhoto1()).into(ivImage);
+        Glide.with(ivImage2).load(profileModel.getPhoto2()).into(ivImage2);
 
 
     }

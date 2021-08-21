@@ -9,10 +9,8 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.happnclone.MapView;
+import com.example.happnclone.Map.MapView;
 import com.example.happnclone.R;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 
 /**
  * A simple {@link Fragment} subclass.

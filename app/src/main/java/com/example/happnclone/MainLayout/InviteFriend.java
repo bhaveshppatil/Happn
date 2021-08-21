@@ -13,7 +13,7 @@ import com.example.happnclone.R;
 
 public class InviteFriend extends AppCompatActivity {
 
-    Button referpeople;
+    Button referPeople;
     Dialog dialog;
 
     @Override
@@ -21,22 +21,22 @@ public class InviteFriend extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invite_friend);
         dialog = new Dialog(this);
-        referpeople = findViewById(R.id.referpeople);
+        referPeople = findViewById(R.id.referpeople);
 
-        referpeople.setOnClickListener(new View.OnClickListener() {
+        referPeople.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openwindialogue();
+                openWinDialogue();
             }
         });
     }
 
-    private void openwindialogue() {
+    private void openWinDialogue() {
         dialog.setContentView(R.layout.win_layout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        Button okbtn = dialog.findViewById(R.id.okbutton);
-        okbtn.setOnClickListener(new View.OnClickListener() {
+        Button okBtn = dialog.findViewById(R.id.okbutton);
+        okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();

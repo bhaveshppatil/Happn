@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.happnclone.ProfileModel;
+import com.example.happnclone.LoginDetail.ProfileModel;
 import com.example.happnclone.R;
 
 import java.util.List;

@@ -12,11 +12,10 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.happnclone.MainActivity;
 import com.example.happnclone.Match.FormulaAdaptor;
-import com.example.happnclone.ProfileModel;
+import com.example.happnclone.LoginDetail.ProfileModel;
 import com.example.happnclone.R;
-import com.example.happnclone.ResponseModel;
+import com.example.happnclone.LoginDetail.ResponseModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
@@ -26,18 +25,12 @@ import com.yuyakaido.android.cardstackview.Direction;
 import com.yuyakaido.android.cardstackview.StackFrom;
 import com.yuyakaido.android.cardstackview.SwipeableMethod;
 
-import java.io.DataInput;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MeetFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MeetFragment extends Fragment {
 
 
@@ -48,54 +41,15 @@ public class MeetFragment extends Fragment {
     private CardStackView cardStackView;
     int count = 0;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MeetFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MeetFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MeetFragment newInstance(String param1, String param2) {
-        MeetFragment fragment = new MeetFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_meet, container, false);
 
-//        initviews(view);
-        setRecycleAdaptopr();
+
+        setRecycleAdapter();
         cardStackView = view.findViewById(R.id.stackview);
         hearts = view.findViewById(R.id.hearts);
         love = view.findViewById(R.id.love);
@@ -164,16 +118,16 @@ public class MeetFragment extends Fragment {
             }
         });
 
-        cardswipe();
+        cardSwipe();
 
-        startBackgroungThread();
+        startBackgroundThread();
 
 
         return view;
     }
 
 
-    private void cardswipe() {
+    private void cardSwipe() {
         manager.setStackFrom(StackFrom.None);
         manager.getItemCount();
         manager.setVisibleCount(20);
@@ -190,7 +144,7 @@ public class MeetFragment extends Fragment {
         cardStackView.setAdapter(formulaAdaptor);
     }
 
-    private void setRecycleAdaptopr() {
+    private void setRecycleAdapter() {
         formulaAdaptor = new FormulaAdaptor(profileModelList);
 
     }
@@ -199,17 +153,17 @@ public class MeetFragment extends Fragment {
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            readJsonfromAssests();
+            readJsonFromAssets();
         }
     };
 
-    private void startBackgroungThread() {
+    private void startBackgroundThread() {
         Thread thread = new Thread(runnable);
         thread.start();
     }
 
 
-    private void readJsonfromAssests() {
+    private void readJsonFromAssets() {
 
         try {
             InputStream inputStream = getContext().getAssets().open("formula.json");

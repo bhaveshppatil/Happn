@@ -15,9 +15,9 @@
         android:theme="@style/Theme.HappnClone">
         <activity android:name=".MainLayout.AppSettings"></activity>
         <activity android:name=".ChatData.ChatScreen" />
-        <activity android:name=".MapView" />
+        <activity android:name=".Map.MapView" />
         <activity android:name=".MainLayout.InviteFriend" />
-        <activity android:name=".MainLayout.Mypreferences" />
+        <activity android:name=".MainLayout.MyPreferences" />
         <activity android:name=".MainLayout.Layout_MainActivity" />
         <activity android:name=".Quiz.VacationAdventure" />
         <activity android:name=".Quiz.Exercise_main" />
@@ -28,11 +28,11 @@
         <activity android:name=".Quiz.quizOneWhyHappn" />
         <activity android:name=".Quiz.QuizIntro" />
         <activity android:name=".Quiz.MaleFemaleCheck" />
-        <activity android:name=".FBPrivacyPolicy" />
-        <activity android:name=".FBTermsConditions" />
-        <activity android:name=".DataPolicy" />
-        <activity android:name=".TermsConditions" />
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".LoginDetail.FBPrivacyPolicy" />
+        <activity android:name=".LoginDetail.FBTermsConditions" />
+        <activity android:name=".LoginDetail.DataPolicy" />
+        <activity android:name=".LoginDetail.TermsConditions" />
+        <activity android:name=".Map.Splash_Screen">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
