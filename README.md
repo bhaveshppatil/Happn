@@ -30,7 +30,7 @@ and from that day we meet daily for the project Discussion, What we have to impr
 
 
 - **[Sudarshan Prasad](https://github.com/SudarshanDPrasad)** was working on Main layout, RecyclerView and on API.
-- **[Subham Kumar](https://github.com/loganrv10)** was working on the User input part, Splash screen, Quiz, UI/UX.
+- **[Subham Kumar](https://github.com/loganrv10)** was working on the User input part, Splash screen, Quiz, UI/UX, Firebase Login.
 - **[Bhavesh Patil](https://github.com/bhaveshppatil)** was working on layout Design, Firebase Login, MapView, Chat Feature. 
 
 <h3 align="left">Features we implemented in it. : </h3>
